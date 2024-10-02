@@ -1,0 +1,38 @@
+@use '../../styles/mixins'
+@use '../../styles/variables'
+
+header
+    @include mixins.widthAndHeight(100%, auto)
+
+.iconContainer
+    @include mixins.widthAndHeight(100%, auto)
+    @include mixins.flexContent(flex, flex-end, flex-start)
+
+    .icon
+        font-size: 50px
+
+.links
+    display: none
+
+    a
+        list-style: none
+        color: black
+
+        li
+            padding-block: 10px
+            border-block: 1px solid black
+            text-align: center
+
+.show
+    display: block // Mostra o menu quando a classe 'show' for aplicada
+
+@media (min-width: 391px)
+    .iconContainer
+        display: none
+
+    .links
+        @include mixins.flexContent(flex, flex-end, center)
+
+        a
+            li
+                border: none

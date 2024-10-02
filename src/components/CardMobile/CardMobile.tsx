@@ -1,4 +1,4 @@
-import "../pages/Quiz/Quiz.sass";
+import "./CardMobile.sass";
 
 const CardMobile = () => {
 	return (

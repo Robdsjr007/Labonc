@@ -1,6 +1,27 @@
-html, body
-    width: 100%
-    height: 100%
+@use './styles/mixins'
+@use './styles/variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html,body
+    @include mixins.widthAndHeight(100%, 100%)
 
 label, span
     font-family: 'Roboto'
+
+a
+    text-decoration: none
+
+.btn
+    @include mixins.widthAndHeight(242px, 60px)
+    border: none
+    margin: 0 auto
+    border-radius: 20px
+    font-size: 24px
+    font-weight: bold
+    color: white
+    background-color: variables.$bg-golden1
+    padding: 10px

@@ -1,6 +1,4 @@
-import styles from "./Quiz.sass";
-
-import CardMobile from "../../components/CardMobile";
+import CardMobile from "../../components/CardMobile/CardMobile";
 
 const Quiz = () => {
 	return (
@@ -12,4 +10,3 @@ const Quiz = () => {
 
 export default Quiz;
 
-/* From Uiverse.io by Yaya12085 */

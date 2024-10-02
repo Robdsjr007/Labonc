@@ -1,0 +1,27 @@
+@use '../../styles/mixins'
+@use '../../styles/variables'
+
+.HomeContainer
+
+    main
+        @include mixins.flexContent(flex, flex-start, center)
+        flex-direction: column
+
+        .logoMobile
+            width: 350px
+
+        .fotoMinimalista
+            width: 350px
+            margin-top: -115px
+
+        p
+            text-align: center
+            font-size: 32px
+            margin-top: -15px
+            margin-bottom: 20px
+
+
+@media (min-width: 391px)
+    main
+        .logoMobile
+            display: none

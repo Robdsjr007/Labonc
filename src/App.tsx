@@ -6,6 +6,8 @@ import "./app.sass";
 // Pages
 import Home from "./pages/Home/Home";
 import Quiz from "./pages/Quiz/Quiz";
+import Forms from "./pages/Forms/Forms";
+import Premium from "./pages/Premium/Premium";
 
 function App() {
 	return (
@@ -13,6 +15,8 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/form" element={<Forms/>} />
+					<Route path="/premium" element={<Premium />} />
 					<Route path="/quiz" element={<Quiz />} />
 				</Routes>
 			</BrowserRouter>
