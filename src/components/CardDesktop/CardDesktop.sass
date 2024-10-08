@@ -1,0 +1,131 @@
+.container
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 16px
+    overflow: hidden
+    border-radius: 8px
+    padding: 24px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+
+.title
+    width: 100%
+    text-align: center
+    font-family: monospace
+    font-size: 1rem
+    font-weight: bold
+    text-transform: uppercase
+    color: #4b5563
+
+.ball-options
+    display: flex
+    align-items: center
+    gap: 16px
+
+.ball-option
+    position: relative
+    display: flex
+    height: 50px
+    width: 50px
+    align-items: center
+    justify-content: center
+
+    input
+        position: absolute
+        height: 100%
+        width: 100%
+        cursor: pointer
+        opacity: 0
+        z-index: 10
+
+    .circle
+        position: absolute
+        height: 100%
+        width: 100%
+        border-radius: 50%
+        padding: 8px
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+        transition: transform 0.3s, box-shadow 0.3s
+
+    .circle-inner
+        position: absolute
+        height: 100%
+        width: 100%
+        border-radius: 50%
+        transform: scale(0)
+        transition: transform 0.5s
+        z-index: -1
+
+    input:checked ~ .circle
+        transform: scale(1.1)
+        box-shadow: 0 0 0 2px currentColor
+
+    input:checked ~ .circle-inner
+        transform: scale(5)
+
+    .icon
+        position: absolute
+
+    /* Never */
+    &.never .circle
+        background-color: #007E8C
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+        border-color: #9bc8ff
+
+    &.never .circle-inner
+        background-color: #03b8cc
+
+    &.never .icon
+        stroke: #9bc8ff
+
+    /* Male */
+    &.male .circle
+        background-color: #43A4AF
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+        border-color: #60a5fa
+
+    &.male .circle-inner
+        background-color: #5ce7f7
+
+    &.male .icon
+        stroke: #60a5fa
+
+    /* Female */
+    &.female .circle
+        background-color: #E5E5E5
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+        border-color: #f472b6
+
+    &.female .circle-inner
+        background-color: #f1f1f1
+
+    &.female .icon
+        fill: #f472b6
+
+    /* Non-binary */
+    &.non-binary .circle
+        background-color: #35AD88
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+        border-color: #c084fc
+
+    &.non-binary .circle-inner
+        background-color: #45e0b2
+
+    &.non-binary .icon
+        fill: #c084fc
+
+    /* None */
+    &.none .circle
+        background-color: #005238
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+        border-color: #a3a3a3
+
+    &.none .circle-inner
+        background-color: #009465
+
+    &.none .icon
+        stroke: #a3a3a3
+
+@media (max-width: 390px)
+    .container
+        display: none
