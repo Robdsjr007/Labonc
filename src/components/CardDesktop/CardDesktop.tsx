@@ -1,42 +1,65 @@
-import './CardDesktop.sass'
+import styles from "./CardDesktop.module.sass";
+import useFetchPerguntas from "../../hook/useFetchPerguntas";
 
 const CardDesktop = () => {
-    return (
-        <article className="container">
-            <span className="title">Please select one color</span>
-            <div className="ball-options">
-                <div className="ball-option never">
-                    <input value="male" name="gender" type="radio" />
-                    <div className="circle"></div>
-                    <div className="circle-inner"></div>
-                </div>
+  const {
+    data: perguntas,
+    loading,
+    error,
+  } = useFetchPerguntas("/perguntas.json");
 
-                <div className="ball-option male">
-                    <input value="male" name="gender" type="radio" />
-                    <div className="circle"></div>
-                    <div className="circle-inner"></div>
-                </div>
+  if (loading) {
+    return <p>Carregando...</p>;
+  }
 
-                <div className="ball-option female">
-                    <input value="female" name="gender" type="radio" />
-                    <div className="circle"></div>
-                    <div className="circle-inner"></div>
-                </div>
+  if (error) {
+    return <p>Erro: {error}</p>;
+  }
 
-                <div className="ball-option non-binary">
-                    <input value="non-binary" name="gender" type="radio" />
-                    <div className="circle"></div>
-                    <div className="circle-inner"></div>
-                </div>
+  return (
+    <>
+      {perguntas ? (
+        perguntas.map((pergunta) => (
+          <article className={styles.container} key={pergunta.id}>
+            <span className={styles.title}>{pergunta.titulo}</span>
+            <div className={styles.ball_options}>
+              <div className={`${styles.ball_option} ${styles.never}`}>
+                <input value="male" name="gender" type="radio" />
+                <div className={styles.circle}></div>
+                <div className={styles.circle_inner}></div>
+              </div>
 
-                <div className="ball-option none">
-                    <input value="none" name="gender" type="radio" />
-                    <div className="circle"></div>
-                    <div className="circle-inner"></div>
-                </div>
+              <div className={`${styles.ball_option} ${styles.male}`}>
+                <input value="male" name="gender" type="radio" />
+                <div className={styles.circle}></div>
+                <div className={styles.circle_inner}></div>
+              </div>
+
+              <div className={`${styles.ball_option} ${styles.female}`}>
+                <input value="female" name="gender" type="radio" />
+                <div className={styles.circle}></div>
+                <div className={styles.circle_inner}></div>
+              </div>
+
+              <div className={`${styles.ball_option} ${styles.non_binary}`}>
+                <input value="non-binary" name="gender" type="radio" />
+                <div className={styles.circle}></div>
+                <div className={styles.circle_inner}></div>
+              </div>
+
+              <div className={`${styles.ball_option} ${styles.none}`}>
+                <input value="none" name="gender" type="radio" />
+                <div className={styles.circle}></div>
+                <div className={styles.circle_inner}></div>
+              </div>
             </div>
-        </article>
-    )
-}
+          </article>
+        ))
+      ) : (
+        <p>Erro ao obter os dados!</p>
+      )}
+    </>
+  );
+};
 
-export default CardDesktop
+export default CardDesktop;

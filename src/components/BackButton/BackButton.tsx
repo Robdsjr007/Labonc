@@ -9,7 +9,7 @@ type Props = {
 
 const BackButton = ({ link }: Props) => {
     return (
-        <nav>
+        <nav className={styles.Container}>
             <Link to={link}>
                 <FaChevronLeft className={styles.ArrowLeft}/>
             </Link>

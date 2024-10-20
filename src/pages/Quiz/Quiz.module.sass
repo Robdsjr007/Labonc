@@ -2,6 +2,8 @@
 @use '../../styles/mixins'
 
 .container
-    @include mixins.flexContent(flex, center, flex-start)
+    @include mixins.flexContent(flex, flex-start, center)
+    gap: 50px
+    flex-direction: column
     
 

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "titulo": "Você prefere socializar com melhores amigos, ou passar mais tempo sozinho?",
+    "tipos": [
+      { "categoria": "E", "valor": 150 },
+      { "categoria": "E", "valor": 100 },
+      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "I", "valor": 100 },
+      { "categoria": "I", "valor": 150 }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Me sinto energizado e animado, após longas interações sociais.",
+    "tipos": [
+      { "categoria": "E", "valor": 200 },
+      { "categoria": "E", "valor": 100 },
+      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "I", "valor": 50 },
+      { "categoria": "I", "valor": 100 }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Eu prefiro algo definitivo do que com margem para pensar no futuro.",
+    "tipos": [
+      { "categoria": "S", "valor": 150 },
+      { "categoria": "S", "valor": 100 },
+      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "N", "valor": 100 },
+      { "categoria": "N", "valor": 150 }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Trabalhar com ideias inovadoras é muito melhor do que usar apenas experiências passadas.",
+    "tipos": [
+      { "categoria": "S", "valor": 150 },
+      { "categoria": "S", "valor": 100 },
+      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "N", "valor": 100 },
+      { "categoria": "N", "valor": 150 }
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "Eu prefiro algo definitivo do que com margem para pensar no futuro.",
+    "tipos": [
+      { "categoria": "S", "valor": 150 },
+      { "categoria": "S", "valor": 100 },
+      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "N", "valor": 100 },
+      { "categoria": "N", "valor": 150 }
+    ]
+  }
+]
