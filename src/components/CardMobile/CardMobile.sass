@@ -1,3 +1,6 @@
+@use '../../styles/mixins'
+@use '../../styles/variables'
+
 .radio_input input
     display: none
 
@@ -13,9 +16,7 @@
 
 .info
     margin-bottom: 10px
-    display: flex
-    align-items: center
-    justify-content: space-between
+    @include mixins.flexContent(flex, space-between, center)
 
 .question
     color: rgb(49, 49, 49)
@@ -32,6 +33,13 @@
     line-height: 12px
     font-weight: 600
 
+@include mixins.alternativePersonal(value-1, variables.$esmerald1, variables.$esmerald1)
+@include mixins.alternativePersonal(value-2, variables.$esmerald2, variables.$esmerald2)
+@include mixins.alternativePersonal(value-3, variables.$gray, variables.$black)
+@include mixins.alternativePersonal(value-4, variables.$esmeraldlite2, variables.$esmeraldlite2)
+@include mixins.alternativePersonal(value-5, variables.$esmeraldlite1, variables.$esmeraldlite1)
+
+
 .radio_input  label
     display: flex
     background-color: #fff
@@ -41,8 +49,6 @@
     font-weight: 600
     border-radius: 10px
     cursor: pointer
-    border: 1px solid rgba(187, 187, 187, 0.164)
-    color: #000
     transition: .3s ease
 
     &:hover
@@ -56,43 +62,11 @@
     display: none
     transition: display .4s ease
 
-
-.neutro
-
-.discordo_nem_tanto    
-
-.discordo
-    color: red
-
-.radio_input input:checked + label
-    border-color: red
-    color: red
-
-.radio_input input[value="value-1"]:checked + label
-    border-color: #007E8C
-    color: rgb(255, 255, 255)
-    background-color: #007E8C
-
-.radio_input input[value="value-2"]:checked + label
-    border-color: #43A4AF
-    color: rgb(255, 255, 255)
-    background-color: #43A4AF
-
-.radio_input input[value="value-3"]:checked + label
-    border-color: #E5E5E5
-    color: black
-    background-color: #E5E5E5
-
-.radio_input input[value="value-4"]:checked + label
-    border-color: #35AD88
-    color: rgb(255, 255, 255)
-    background-color: #35AD88
-
-.radio_input input[value="value-5"]:checked + label
-    border-color: #005238
-    color: rgb(255, 255, 255)
-    background-color: #005238
-
+@include mixins.alternativeChecked(value-1, variables.$esmerald1, variables.$white, variables.$esmerald1)
+@include mixins.alternativeChecked(value-2, variables.$esmerald2, variables.$white, variables.$esmerald2)
+@include mixins.alternativeChecked(value-3, variables.$gray, variables.$white, variables.$gray)
+@include mixins.alternativeChecked(value-4, variables.$esmeraldlite2, variables.$white, variables.$esmeraldlite2)
+@include mixins.alternativeChecked(value-5, variables.$esmeraldlite1, variables.$white, variables.$esmeraldlite1)
 
 @media (width >= 491px)
     .radio_input

@@ -28,35 +28,35 @@ const CardMobile = () => {
 				name="value-radio"
 				value="value-1"
 			  />
-			  <label htmlFor={`value-1 ${pergunta.id}`}>Concordo</label>            
+			  <label className="value-1" htmlFor={`value-1 ${pergunta.id}`}>Concordo</label>            
             <input
               type="radio"
               id={`value-2 ${pergunta.id}`}
               name="value-radio"
               value="value-2"
             />
-            <label htmlFor={`value-2 ${pergunta.id}`}>Concordo um pouco</label>
+            <label className="value-2" htmlFor={`value-2 ${pergunta.id}`}>Concordo um pouco</label>
             <input
               type="radio"
               id={`value-3 ${pergunta.id}`}
               name="value-radio"
               value="value-3"
             />
-            <label htmlFor={`value-3 ${pergunta.id}`}>Neutro</label>
+            <label className="value-3" htmlFor={`value-3 ${pergunta.id}`}>Neutro</label>
             <input
               type="radio"
               id={`value-4 ${pergunta.id}`}
               name="value-radio"
               value="value-4"
             />
-            <label htmlFor={`value-4 ${pergunta.id}`}>Discordo um pouco</label>
+            <label className="value-4" htmlFor={`value-4 ${pergunta.id}`}>Discordo um pouco</label>
             <input
               type="radio"
               id={`value-5 ${pergunta.id}`}
               name="value-radio"
               value="value-5"
             />
-            <label htmlFor={`value-5 ${pergunta.id}`}>Discordo</label>
+            <label className="value-5" htmlFor={`value-5 ${pergunta.id}`}>Discordo</label>
           </article>
         ))
       ) : (

@@ -16,3 +16,14 @@
 @mixin MinWidthAndMinHeight($minwidth, $minheight)
     min-width: $minwidth
     min-height: $minheight
+
+@mixin alternativeChecked($value, $bd-color, $color, $bg-color)
+  .radio_input input[value="#{$value}"]:checked + label
+    border-color: $bd-color
+    color: $color
+    background-color: $bg-color
+
+@mixin alternativePersonal($value, $bd-color, $color)
+  .radio_input .#{$value}
+    border: 1px solid $bd-color
+    color: $color
