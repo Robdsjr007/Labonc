@@ -9,8 +9,8 @@ const Quiz = () => {
 		<>
 			<BackButton link={"/"} />
 			<main className={styles.container}>
-				<CardMobile />
-				<CardDesktop />
+					<CardMobile />
+					<CardDesktop />
 			</main>
 		</>
 	);
