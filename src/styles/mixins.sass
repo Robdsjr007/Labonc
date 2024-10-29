@@ -18,7 +18,7 @@
     min-height: $minheight
 
 @mixin alternativeChecked($value, $bd-color, $color, $bg-color)
-  .radio_input input[value="#{$value}"]:checked + label
+  .radio_input .#{$value}:checked + label
     border-color: $bd-color
     color: $color
     background-color: $bg-color

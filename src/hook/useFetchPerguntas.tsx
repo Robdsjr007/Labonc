@@ -1,16 +1,5 @@
 import { useState, useEffect } from 'react';
-
-// Defina a interface para a estrutura dos dados que você espera receber
-interface Tipo {
-  categoria: string;
-  valor: number;
-}
-
-interface Pergunta {
-  id: number;      // Exemplo de campo, ajuste conforme necessário
-  titulo: string;  // Exemplo de campo, ajuste conforme necessário
-  tipos: Tipo[]; // Exemplo de campo, ajuste conforme necessário
-}
+import { Pergunta } from '../types/types';
 
 // Defina a interface para o retorno do hook
 interface UseFetchReturn {
