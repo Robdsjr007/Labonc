@@ -1,0 +1,10 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.containerResult
+    @include mixins.widthAndHeight(100%, 100%)
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: variables.$bg-result
+    background-image: url("../../../img/bg-result.png")
+    background-blend-mode: screen

@@ -1,14 +1,15 @@
 @use '../../styles/mixins'
 @use '../../styles/variables'
 
-.Container
+.containerBtn
     @include mixins.flexContent(flex, center, center)
     width: max-content
-    border: 1px solid #E8ECF4
+    border: 1px solid variables.$bg-backBtn
     border-radius: 10px
     padding: 14px 16px 12px 14px
-    margin: 10px 0 30px 10px
+    margin: 0 0 30px 10px
     transition: transform 0.3s ease-in-out
+    background-color: variables.$white
 
     .ArrowLeft
         @include mixins.widthAndHeight(15px, 15px)

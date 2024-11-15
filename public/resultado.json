@@ -1,0 +1,115 @@
+[
+    {
+        "personalidade": "INTJ",
+        "titulo": "Visionário",
+        "descricao": "Estratégico, independente, analítico e visionário. Consegue ver o quadro geral e planejar em longo prazo. É altamente confiante em suas habilidades. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Minimalista", "Executivo", "Edye", "Gótico"] 
+    },
+    {
+        "personalidade": "INTP",
+        "titulo": "Enigmático",
+        "descricao": "Analítico, curioso, inovador e reservado. Busca entender os princípios fundamentais por trás das ideias. Prefere a lógica e a busca pelo conhecimento. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Geek Chic", "Artístico", "Minimalista", "Cyberpunk"] 
+    },
+    {
+        "personalidade": "ENTJ",
+        "titulo": "Estratégico",
+        "descricao": "Ambicioso, eficiente, líder natural e estratégico. Gosta de planejar e executar suas visões com determinação. Prefere o poder, a estrutura e a liderança. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Executivo", "Chic", "Militar", "Clássico"] 
+    },
+    {
+        "personalidade": "ENTP",
+        "titulo": "Revolucionário",
+        "descricao": "Inventivo, argumentativo, adaptável e curioso. Gosta de desafios intelectuais e de explorar novos conceitos. Prefere a inovação e a improvisação. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Streetwear", "Boho", "Vintage", "Cyberpunk"] 
+    },
+
+
+
+
+
+
+    {
+        "personalidade": "INFJ",
+        "titulo": "Idealista",
+        "descricao": "Intuitivo, idealista, empático e reservado. Tem uma forte visão interna e busca significado profundo nas interações. Prefere conexões autênticas. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Romântico", "Minimalista", "Vintage", "Étnico"] 
+    },
+    {
+        "personalidade": "INFP",
+        "titulo": "Sonhador",
+        "descricao": "Idealista, criativo, empático e introspectivo. Motivado por valores pessoais, busca autenticidade e significado profundo. Prefere a harmonia e a individualidade. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Boho", "Romântico", "Afrofuturista", "Festival"] 
+    },
+    {
+        "personalidade": "ENFJ",
+        "titulo": "Inspirador",
+        "descricao": "Carismático, empático, líder nato e cooperativo. Gosta de inspirar e motivar os outros. Prefere a conexão emocional e a visão coletiva. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Executivo", "Chic", "Clássico", "Romântico"] 
+    },{
+        "personalidade": "ENFP",
+        "titulo": "Explorador",
+        "descricao": "Criativo, enérgico, entusiástico e empático. Gosta de explorar novas ideias e possibilidades. Prefere a liberdade, a inovação e as conexões emocionais. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Boho", "Streetwear", "Festival", "Artístico"] 
+    },
+
+
+
+
+
+
+    {
+        "personalidade": "ISTJ",
+        "titulo": "Guardião",
+        "descricao": "Confiável, prático, responsável e orientado para detalhes. Valoriza a tradição e segue regras. É metódico e organizado. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Clássico", "Executivo", "Minimalista", "Militar"] 
+    },
+    {
+        "personalidade": "ISFJ",
+        "titulo": "Protetor",
+        "descricao": "Atencioso, dedicado, protetor e leal. Gosta de ajudar os outros e é altamente consciente das necessidades alheias. Valorizam a harmonia e a tradição. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Romântico", "Clássico", "Étnico", "Preppy"] 
+    },
+    {
+        "personalidade": "ESTJ",
+        "titulo": "Gestor",
+        "descricao": "Organizado, decidido, responsável e direto. Gosta de liderança e de manter a ordem. Prefere a eficiência e o cumprimento de regras. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Executivo", "Clássico", "Militar", "Chic"] 
+    },
+    {
+        "personalidade": "ESFJ",
+        "titulo": "Conselheiro",
+        "descricao": "Sociável, cooperativo, simpático e prático. Gosta de ajudar os outros e manter a harmonia social. Prefere a tradição, a organização e a cooperação. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Chic", "Romântico", "Preppy", "Executivo"] 
+    },
+
+
+
+
+
+
+    {
+        "personalidade": "ISTP",
+        "titulo": "Artífice",
+        "descricao": "Prático, observador, curioso e independente. Gosta de descobrir como as coisas funcionam e é hábil em resolver problemas técnicos. Prefere a ação e a experimentação. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Esportivo (Athleisure)", "Streetwear", "Minimalista", "Grunge"] 
+    },
+    {
+        "personalidade": "ISFP",
+        "titulo": "Criador",
+        "descricao": "Sensível, espontâneo, artístico e reservado. Vive no momento e aprecia a beleza ao seu redor. Prefere expressar-se através de ações e criações. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Boho", "Romântico", "Artístico", "Étnico"] 
+    },
+    {
+        "personalidade": "ESTP",
+        "titulo": "Conquistador",
+        "descricao": "Dinâmico, energético, pragmático e sociável. Gosta de viver no momento e enfrentar desafios com confiança. Prefere a ação rápida e a adaptação. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Streetwear", "Esportivo (Athleisure)", "Edye", "Grunge Chic"] 
+    },
+    {
+        "personalidade": "ESFP",
+        "titulo": "Celebridade",
+        "descricao": "Extrovertido, entusiástico, divertido e sociável. Gosta de interagir com os outros e vive intensamente no momento. Prefere a espontaneidade e o prazer. As possiveis combinaçôes de estilo seria:",
+        "estilos": ["Festival", "Glamour", "Streetwear", "Romântico"] 
+    }
+]

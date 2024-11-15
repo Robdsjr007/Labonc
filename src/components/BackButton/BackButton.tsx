@@ -1,6 +1,6 @@
 import styles from './BackButton.module.sass';
 
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaChevronLeft } from 'react-icons/fa';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 const BackButton = ({ link }: Props) => {
     return (
-        <nav className={styles.Container}>
+        <nav className={styles.containerBtn}>
             <Link to={link}>
                 <FaChevronLeft className={styles.ArrowLeft}/>
             </Link>

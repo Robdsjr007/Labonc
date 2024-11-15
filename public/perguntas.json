@@ -42,16 +42,5 @@
       { "categoria": "N", "valor": 100 },
       { "categoria": "N", "valor": 150 }
     ]
-  },
-  {
-    "id": 5,
-    "titulo": "Eu prefiro algo definitivo do que com margem para pensar no futuro.",
-    "tipos": [
-      { "categoria": "S", "valor": 150 },
-      { "categoria": "S", "valor": 100 },
-      { "categoria": "NEUTRO", "valor": 0 },
-      { "categoria": "N", "valor": 100 },
-      { "categoria": "N", "valor": 150 }
-    ]
   }
 ]
