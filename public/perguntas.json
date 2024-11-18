@@ -12,17 +12,6 @@
   },
   {
     "id": 2,
-    "titulo": "Me sinto energizado e animado, após longas interações sociais.",
-    "tipos": [
-      { "categoria": "E", "valor": 200 },
-      { "categoria": "E", "valor": 100 },
-      { "categoria": "NEUTRO", "valor": 0 },
-      { "categoria": "I", "valor": 50 },
-      { "categoria": "I", "valor": 100 }
-    ]
-  },
-  {
-    "id": 3,
     "titulo": "Eu prefiro algo definitivo do que com margem para pensar no futuro.",
     "tipos": [
       { "categoria": "S", "valor": 150 },
@@ -33,14 +22,25 @@
     ]
   },
   {
-    "id": 4,
-    "titulo": "Trabalhar com ideias inovadoras é muito melhor do que usar apenas experiências passadas.",
+    "id": 3,
+    "titulo": "Gosto de tomar decisões baseadas em lógica e análise sem me preocupar com o impacto nas pessoas.",
     "tipos": [
-      { "categoria": "S", "valor": 150 },
-      { "categoria": "S", "valor": 100 },
+      { "categoria": "T", "valor": 200 },
+      { "categoria": "T", "valor": 100 },
       { "categoria": "NEUTRO", "valor": 0 },
-      { "categoria": "N", "valor": 100 },
-      { "categoria": "N", "valor": 150 }
+      { "categoria": "F", "valor": 100 },
+      { "categoria": "F", "valor": 150 }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Sempre que começo um projeto, opto por ajustar o plano conforme necessário.",
+    "tipos": [
+      { "categoria": "P", "valor": 200 },
+      { "categoria": "P", "valor": 100 },
+      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "J", "valor": 100 },
+      { "categoria": "J", "valor": 150 }
     ]
   }
 ]
