@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
 import styles from './Result.module.sass';
 
 import BackButton from "../../components/BackButton/BackButton";
 import LoaderResult from '../../components/LoaderResult/LoaderResult';
 
 const Result = () => {
+  const location = useLocation(); // Acessa os dados da navegação
+  const { resultadoFinal } = location.state || {}; // Desestrutura e acessa o resultado
+
   const [imageBgLoaded, setImageLoaded] = useState(false);
   const [titleProfile, setTitleProfile] = useState<string | null>(null);
   const [imageProfile, setImageProfile] = useState<string | null>(null);
@@ -16,7 +20,12 @@ const Result = () => {
     image.onload = () => {
       setImageLoaded(true);
     };
-  }, [backgroundImageUrl]);
+
+    console.log(resultadoFinal)
+
+  }, []);
+
+
 
 
   return (

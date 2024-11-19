@@ -12,7 +12,7 @@ const Home = () => {
 					<img className={styles.logoMobile} src="../../img/logo.png" alt="logo" />
 					<img className={styles.fotoMinimalista} src="../../img/minimalism.png" alt="imagem minimalista" />
 					<p>Moda que transforma identidade em estilo.</p>
-					<Link to='/quiz'><button className="btn">Veja seu estilo já</button></Link>
+					<Link to='/quiz'><button id="btn">Veja seu estilo já</button></Link>
 				</main>
 			</section>
 		</main>

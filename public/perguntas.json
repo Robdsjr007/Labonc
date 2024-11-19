@@ -5,7 +5,7 @@
     "tipos": [
       { "categoria": "E", "valor": 150 },
       { "categoria": "E", "valor": 100 },
-      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "I", "valor": 50 },
       { "categoria": "I", "valor": 100 },
       { "categoria": "I", "valor": 150 }
     ]
@@ -16,7 +16,7 @@
     "tipos": [
       { "categoria": "S", "valor": 150 },
       { "categoria": "S", "valor": 100 },
-      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "S", "valor": 50 },
       { "categoria": "N", "valor": 100 },
       { "categoria": "N", "valor": 150 }
     ]
@@ -27,7 +27,7 @@
     "tipos": [
       { "categoria": "T", "valor": 200 },
       { "categoria": "T", "valor": 100 },
-      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "F", "valor": 50 },
       { "categoria": "F", "valor": 100 },
       { "categoria": "F", "valor": 150 }
     ]
@@ -38,7 +38,7 @@
     "tipos": [
       { "categoria": "P", "valor": 200 },
       { "categoria": "P", "valor": 100 },
-      { "categoria": "NEUTRO", "valor": 0 },
+      { "categoria": "P", "valor": 50 },
       { "categoria": "J", "valor": 100 },
       { "categoria": "J", "valor": 150 }
     ]

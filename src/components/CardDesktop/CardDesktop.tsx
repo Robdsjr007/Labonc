@@ -1,64 +1,95 @@
 import styles from "./CardDesktop.module.sass";
-import useFetchPerguntas from "../../hook/useFetchPerguntas";
+import { FormEvent, useState } from "react";
+import { Pergunta } from "../../types/types";
+import { useNavigate } from "react-router-dom";
 
-const CardDesktop = () => {
-  const {
-    data: perguntas,
-    loading,
-    error,
-  } = useFetchPerguntas("/perguntas.json");
+type CardDesktopProps = {
+  perguntas: Pergunta[];
+};
 
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
+const CardDesktop = ({ perguntas }: CardDesktopProps) => {
+  const [respostas, setRespostas] = useState<{ [key: number]: string }>({});
+  const [enviando, setEnviando] = useState(false);
+  const [erro, setErro] = useState<string | null>(null);
+  const navigate = useNavigate();
 
-  if (error) {
-    return <p>Erro: {error}</p>;
-  }
+  const handleChange = (id: number, value: string) => {
+    setRespostas((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (perguntas.some((p) => !respostas[p.id])) {
+      setErro("Responda todas as perguntas!");
+      return;
+    }
+    setErro(null);
+    setEnviando(true);
+
+    const resultadoFinal = Object.values(respostas)
+      .map((resposta) => resposta.split(":")[0]) // Extrai categoria antes do ":"
+      .join("");
+
+    navigate("/result", { state: { resultadoFinal } });
+  
+    setEnviando(false);
+  };
 
   return (
-    <>
-      {perguntas ? (
-        perguntas.map((pergunta) => (
-          <article className={styles.container} key={pergunta.id}>
-            <span className={styles.title}>{pergunta.titulo}</span>
-            <div className={styles.ball_options}>
-              <div className={`${styles.ball_option} ${styles.never}`}>
-                <input value="male" name="gender" type="radio" />
-                <div className={styles.circle}></div>
-                <div className={styles.circle_inner}></div>
+    <form className={styles.formContainer} onSubmit={handleSubmit}>
+      {perguntas &&
+        perguntas.map((pergunta) => {
+          const valores = pergunta.tipos.map(
+            (tipo) => `${tipo.categoria}: ${tipo.valor}`
+          ); // Combina categoria e valor
+          return (
+            <article className={styles.container} key={pergunta.id}>
+              <span className={styles.title}>{pergunta.titulo}</span>
+              <div className={styles.ball_options}>
+                {[
+                  "Concordo",
+                  "",
+                  "",
+                  "",
+                  "Discordo",
+                ].map((label, index) => (
+                  <div
+                    key={`${pergunta.id}-${index}`}
+                    className={`${styles.ball_option} ${styles[`option-${index + 1}`]}`}
+                  >
+                    <input
+                      type="radio"
+                      id={`value-${index + 1}-${pergunta.id}`}
+                      className={`value-${index + 1}`}
+                      name={`value-radio-${pergunta.id}`}
+                      value={valores[index]}
+                      onChange={(e) => handleChange(pergunta.id, e.target.value)}
+                    />
+                    <div className={styles.circle}></div>
+                    <div className={styles.circle_inner}></div>
+                    <label
+                      htmlFor={`value-${index + 1}-${pergunta.id}`}
+                      className={styles.label}
+                    >
+                      {label}
+                    </label>
+                  </div>
+                ))}
               </div>
+            </article>
+          );
+        })}
 
-              <div className={`${styles.ball_option} ${styles.male}`}>
-                <input value="male" name="gender" type="radio" />
-                <div className={styles.circle}></div>
-                <div className={styles.circle_inner}></div>
-              </div>
+      {erro && <p className={styles.error}>{erro}</p>}
 
-              <div className={`${styles.ball_option} ${styles.female}`}>
-                <input value="female" name="gender" type="radio" />
-                <div className={styles.circle}></div>
-                <div className={styles.circle_inner}></div>
-              </div>
-
-              <div className={`${styles.ball_option} ${styles.non_binary}`}>
-                <input value="non-binary" name="gender" type="radio" />
-                <div className={styles.circle}></div>
-                <div className={styles.circle_inner}></div>
-              </div>
-
-              <div className={`${styles.ball_option} ${styles.none}`}>
-                <input value="none" name="gender" type="radio" />
-                <div className={styles.circle}></div>
-                <div className={styles.circle_inner}></div>
-              </div>
-            </div>
-          </article>
-        ))
-      ) : (
-        <p>Erro ao obter os dados!</p>
-      )}
-    </>
+      <button
+        id={enviando ? `btn aguarde` : `btn`}
+        type="submit"
+        disabled={enviando}
+        >
+        Enviar
+      </button>
+    </form>
   );
 };
 
