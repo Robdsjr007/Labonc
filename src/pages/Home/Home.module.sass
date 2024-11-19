@@ -2,9 +2,11 @@
 @use '../../styles/variables'
 
 .HomeContainer
+    @include mixins.widthAndHeight(100%, 100%)
 
-    main
-        @include mixins.flexContent(flex, flex-start, center)
+    .conteudo
+        height: calc(100% - 130px) !important
+        @include mixins.flexContent(flex, center, center)
         flex-direction: column
 
         .logoMobile
@@ -20,8 +22,15 @@
             margin-top: -15px
             margin-bottom: 20px
 
-
-@media (min-width: 490px)
-    main
+@media (width >= 903px)
+    .conteudo
         .logoMobile
+            display: none
+
+    .fotoMinimalista
+        margin-top: 0 !important
+
+@media (max-width: 903px)
+    .conteudo
+        .logoDesktop
             display: none

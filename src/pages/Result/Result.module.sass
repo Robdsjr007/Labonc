@@ -2,8 +2,55 @@
 @use '../../styles/mixins'
 
 .containerResult
-    @include mixins.widthAndHeight(100%, 100%)
+    width: 100%
+    min-height: 100%
     background-repeat: no-repeat
     background-color: variables.$bg-result
     background-blend-mode: screen
+
+    main
+        @include mixins.flexContent(flex, flex-start, center)
+        flex-direction: column
+        @include mixins.widthAndHeight(100%, auto)
+
+        .info
+            @include mixins.flexContent(flex, flex-start, center)
+            flex-direction: column
+            background-color: variables.$white
+            margin-top: -250px
+            padding-top: 40px
+            padding-inline: 20px
+            @include mixins.widthAndHeight(90%, auto)
+
+            h3
+                font-family: 'Nunito Sans', sans-serif
+                font-size: 1.4rem
+                font-weight: normal
+                text-align: center
+                margin-bottom: 20px
+
+            p
+                font-family: "Acme", sans-serif
+                text-align: center
+                font-size: 1.2rem
+                margin-bottom: 10px
+
+            strong
+                font-family: "Acme", sans-serif
+                text-align: center
+                color: variables.$strong
+                font-size: 1.2rem
+
+            #btn
+                margin-block: 30px
+
+
+h1
+    margin-top: -30px
+    margin-bottom: 30px
+    font-family: "Offside", sans-serif
+    font-weight: 400
+    font-size: 3rem
+    font-style: normal
+
 

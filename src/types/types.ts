@@ -3,11 +3,22 @@ interface Tipo {
     categoria: string;
     valor: number;
   }
-  
-interface Pergunta {
+
+  interface Pergunta {
     id: number;
     titulo: string;
     tipos: Tipo[];
   }
   
-export type {Pergunta, Tipo};
+  interface Estilo {
+    estilo: string;
+  }
+
+  interface Resposta {
+    personalidade: string;
+    titulo: string;
+    descricao: string;
+    estilos: Estilo[];
+  }
+  
+export type {Pergunta, Tipo, Resposta};

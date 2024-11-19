@@ -8,8 +8,12 @@ header
     @include mixins.widthAndHeight(100%, auto)
     @include mixins.flexContent(flex, flex-end, flex-start)
 
-    .icon
-        font-size: 50px
+    button
+        background-color: none
+        border: none
+
+        .icon
+            font-size: 50px
 
 .links
     display: none
@@ -17,6 +21,7 @@ header
     a
         list-style: none
         color: black
+        font-family: 'Nunito Sans', sans-serif
 
         li
             padding-block: 10px
@@ -26,7 +31,15 @@ header
 .show
     display: block // Mostra o menu quando a classe 'show' for aplicada
 
-@media (min-width: 491px)
+.logoMin
+    height: 130px
+
+@media (width >= 903px)
+    .container
+        height: 130px
+        background-color: variables.$bg-golden1
+        @include mixins.flexContent(flex, space-around, center)
+
     .iconContainer
         display: none
 
@@ -35,4 +48,12 @@ header
 
         a
             li
+                font-weight: bold
+                color: variables.$white
+                margin-inline: 20px
+                font-size: 30px
                 border: none
+
+@media (max-width: 903px)
+    .logoMin
+        display: none
