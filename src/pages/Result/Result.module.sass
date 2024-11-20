@@ -17,14 +17,15 @@
             @include mixins.flexContent(flex, flex-start, center)
             flex-direction: column
             background-color: variables.$white
-            margin-top: -250px
+            position: fixed
+            bottom: 0
             padding-top: 40px
             padding-inline: 20px
             @include mixins.widthAndHeight(90%, auto)
 
             h3
                 font-family: 'Nunito Sans', sans-serif
-                font-size: 1.4rem
+                font-size: 1.2rem
                 font-weight: normal
                 text-align: center
                 margin-bottom: 20px
@@ -32,25 +33,27 @@
             p
                 font-family: "Acme", sans-serif
                 text-align: center
-                font-size: 1.2rem
+                font-size: 1rem
                 margin-bottom: 10px
 
             strong
                 font-family: "Acme", sans-serif
                 text-align: center
-                color: variables.$strong
+                color: variables.$bg-golden2
                 font-size: 1.2rem
 
             #btn
                 margin-block: 30px
 
-
 h1
-    margin-top: -30px
     margin-bottom: 30px
     font-family: "Offside", sans-serif
     font-weight: 400
-    font-size: 3rem
+    font-size: 2.5rem
     font-style: normal
 
+.perfil
+    @include mixins.MaxWidthAndMaxHeight(390px, auto)
 
+.hidden
+    display: none

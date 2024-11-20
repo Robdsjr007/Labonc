@@ -2,6 +2,7 @@ import styles from "./CardDesktop.module.sass";
 import { FormEvent, useState } from "react";
 import { Pergunta } from "../../types/types";
 import { useNavigate } from "react-router-dom";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 type CardDesktopProps = {
   perguntas: Pergunta[];
@@ -80,7 +81,7 @@ const CardDesktop = ({ perguntas }: CardDesktopProps) => {
           );
         })}
 
-      {erro && <p className={styles.error}>{erro}</p>}
+      {erro && <ErrorMessage error={erro}/>}
 
       <button
         id={enviando ? `btn aguarde` : `btn`}

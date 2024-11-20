@@ -20,5 +20,9 @@ interface Tipo {
     descricao: string;
     estilos: Estilo[];
   }
+
+  interface Message {
+    error: string
+  }
   
-export type {Pergunta, Tipo, Resposta};
+export type {Pergunta, Tipo, Resposta, Message};

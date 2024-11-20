@@ -17,7 +17,7 @@ const HeaderContainer = (): ReactElement => {
     <header>
       <nav className={styles.container}>
         <div className={styles.iconContainer}>
-          <button disabled onClick={showMenu}><BiMenu className={styles.icon} /></button>
+          <BiMenu className={styles.icon} onClick={showMenu}/>
         </div>
         <Link to="/"><img className={styles.logoMin} src="../img/logo.png" alt="logo" /></Link>
         <ul className={`${styles.links} ${menuVisible ? styles.show : ''}`}>
